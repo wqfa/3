@@ -71,7 +71,7 @@ except FileNotFoundError:
 
 if "token" not in info:
     while (True):
-        bot_token = input("6115292507:AAH8kdzteV7DaXa8KI-lWdmoEBKzZU6A7GY")
+        bot_token = ("6115292507:AAH6TbYNamzWesNavcRya-bAAcC0KvEZJJc")
         response = requests.request(
             "GET", f"https://api.telegram.org/bot{bot_token}/getme")
         response_json = response.json()
@@ -86,7 +86,7 @@ else:
     bot_token = info["token"]
 
 if "sudo" not in info:
-    info["sudo"] = str(("5191375406"))
+    info["sudo"] = str(("5191376406"))
     info["admins"] = {}
     with open("echo_data.json", "w") as json_file:
         json.dump(info, json_file)
@@ -339,7 +339,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
                 ],
             ]
             reply_markup = InlineKeyboardMarkup(keyboard)
-            await update.message.reply_text("مرحبا بك في سورس التجميع الخاص ببوتات الحجي :\n\n- اشترك في قناة تحديثات بوت التجميع : @C45CS\n\n- سرعة التجميع : " + str(info["sleeptime"]), reply_markup=reply_markup)
+            await update.message.reply_text("مرحبا بك في سورس التجميع الخاص ببوتات ايكو :\n\n- اشترك في قناة تحديثات بوت التجميع : @Echo_Auto\n\n- سرعة التجميع : " + str(info["sleeptime"]), reply_markup=reply_markup)
         elif str(update.message.chat.id) in info["admins"]:
             what_need_to_do_echo[str(update.message.chat.id)] = ""
             keyboard = [
@@ -353,7 +353,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
                 ],
             ]
             reply_markup = InlineKeyboardMarkup(keyboard)
-            await update.message.reply_text("مرحبا بك في سورس التجميع الخاص ببوتات الحجي :\n\n- سرعة التجميع : " + str(info["sleeptime"]), reply_markup=reply_markup)
+            await update.message.reply_text("مرحبا بك في سورس التجميع الخاص ببوتات ايكو :\n\n- سرعة التجميع : " + str(info["sleeptime"]), reply_markup=reply_markup)
 
 def contact_validate(text):
     text = str(text)  
@@ -566,7 +566,7 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
                 ],
             ]
             reply_markup = InlineKeyboardMarkup(keyboard)
-            await query.edit_message_text("مرحبا بك في سورس التجميع الخاص ببوتات الحجي :\n\n- سرعة التجميع : " + str(info["sleeptime"]), reply_markup=reply_markup)
+            await query.edit_message_text("مرحبا بك في سورس التجميع الخاص ببوتات ايكو :\n\n- سرعة التجميع : " + str(info["sleeptime"]), reply_markup=reply_markup)
         elif (str(query.message.chat.id) in info["admins"]):
             keyboard = [
                 [
@@ -579,7 +579,7 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
                 ],
             ]
             reply_markup = InlineKeyboardMarkup(keyboard)
-            await query.edit_message_text("مرحبا بك في سورس التجميع الخاص ببوتات الحجي :\n\n- سرعة التجميع : " + str(info["sleeptime"]), reply_markup=reply_markup)
+            await query.edit_message_text("مرحبا بك في سورس التجميع الخاص ببوتات ايكو :\n\n- سرعة التجميع : " + str(info["sleeptime"]), reply_markup=reply_markup)
     elif (query.data == "sleeptime"):
         await query.edit_message_text(f"يرجى إرسال العدد الذي ترغب فيه من الثواني لانتظار البوت للاشتراك في القناة التالية :", reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton("رجوع", callback_data="myadminsecho")],
