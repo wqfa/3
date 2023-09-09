@@ -71,7 +71,7 @@ except FileNotFoundError:
 
 if "token" not in info:
     while (True):
-        bot_token = ("6115292507:AAH8kdzteV7DaXa8KI-lWdmoEBKzZU6A7GY")
+        bot_token = input("Enter the bot token : ")
         response = requests.request(
             "GET", f"https://api.telegram.org/bot{bot_token}/getme")
         response_json = response.json()
@@ -86,7 +86,7 @@ else:
     bot_token = info["token"]
 
 if "sudo" not in info:
-    info["sudo"] = str(("5191376406"))
+    info["sudo"] = str(input("Enter the your telegram ID : "))
     info["admins"] = {}
     with open("echo_data.json", "w") as json_file:
         json.dump(info, json_file)
