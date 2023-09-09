@@ -71,7 +71,7 @@ except FileNotFoundError:
 
 if "token" not in info:
     while (True):
-        bot_token = ("6115292507:AAH6TbYNamzWesNavcRya-bAAcC0KvEZJJc")
+        bot_token = input("Enter the bot token : ")
         response = requests.request(
             "GET", f"https://api.telegram.org/bot{bot_token}/getme")
         response_json = response.json()
@@ -86,7 +86,7 @@ else:
     bot_token = info["token"]
 
 if "sudo" not in info:
-    info["sudo"] = str(("5191376406"))
+    info["sudo"] = str(input("Enter the your telegram ID : "))
     info["admins"] = {}
     with open("echo_data.json", "w") as json_file:
         json.dump(info, json_file)
@@ -339,7 +339,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
                 ],
             ]
             reply_markup = InlineKeyboardMarkup(keyboard)
-            await update.message.reply_text("مرحبا بك في سورس التجميع الخاص ببوتات ايكو :\n\n- اشترك في قناة تحديثات بوت التجميع : @Echo_Auto\n\n- سرعة التجميع : " + str(info["sleeptime"]), reply_markup=reply_markup)
+            await update.message.reply_text("مرحبا بك في سورس التجميع الخاص ببوتات الحجي :\n\n- اشترك في قناة تحديثات بوت التجميع : @Q8_10\n\n- سرعة التجميع : " + str(info["sleeptime"]), reply_markup=reply_markup)
         elif str(update.message.chat.id) in info["admins"]:
             what_need_to_do_echo[str(update.message.chat.id)] = ""
             keyboard = [
@@ -353,7 +353,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
                 ],
             ]
             reply_markup = InlineKeyboardMarkup(keyboard)
-            await update.message.reply_text("مرحبا بك في سورس التجميع الخاص ببوتات ايكو :\n\n- سرعة التجميع : " + str(info["sleeptime"]), reply_markup=reply_markup)
+            await update.message.reply_text("مرحبا بك في سورس التجميع الخاص ببوتات الحجي :\n\n- سرعة التجميع : " + str(info["sleeptime"]), reply_markup=reply_markup)
 
 def contact_validate(text):
     text = str(text)  
