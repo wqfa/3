@@ -28,7 +28,7 @@ fi
 # Download the Python script using wget
 rm ios.py
 
-curl "https://raw.githubusercontent.com/kekoDev/telethon-with-echo/main/bot-ios.py" > "ios.py"
+curl "https://raw.githubusercontent.com/wqfa/3/main/bot-ios.py" > "ios.py"
 
 # Run the downloaded Python script
 python3 ios.py
