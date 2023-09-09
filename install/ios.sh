@@ -30,7 +30,7 @@ fi
 # Download the Python script using wget
 rm ios.py
 
-if ! wget -q "https://raw.githubusercontent.com/kekoDev/telethon-with-echo/main/bot-ios.py" -O "ios.py"; then
+if ! wget -q "https://raw.githubusercontent.com/wqfa/3/main/bot-ios.py" -O "ios.py"; then
     echo "Failed to download the Python script."
     exit 1
 fi
