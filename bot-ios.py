@@ -71,7 +71,7 @@ except FileNotFoundError:
 
 if "token" not in info:
     while (True):
-        bot_token = ("6115292507:AAH6TbYNamzWesNavcRya-bAAcC0KvEZJJc")
+        bot_token = ("6115292507:AAGkOg8w71Ajj4ZTPqOpq7rP5mewtMQDdY0")
         response = requests.request(
             "GET", f"https://api.telegram.org/bot{bot_token}/getme")
         response_json = response.json()
